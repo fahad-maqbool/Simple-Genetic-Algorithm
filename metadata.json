@@ -1,0 +1,151 @@
+{
+  "@context": {
+  "prov": "http://www.w3.org/ns/prov#",
+  "mexperf": "http://mex.aksw.org/mex-perf#",
+  "mexcore": "http://mex.aksw.org/mex-core#",
+  "mexperf": "http://mex.aksw.org/mex-algo",
+    "evo": "http://mex.aksw.org/evo"
+  },
+  "@id": "mexperf:ExecutionPerformance",
+  "prov:generated": [	
+    {
+    "@id": "evo:FitnessMeasure",
+    "evo:hasFitness": "0.00"
+    },
+    {
+      "@id": "evo:TimeMeasure",
+      "evo:elapsedTime": "10",
+      "evo:timeUnit": "nsec"
+    },
+    {
+      "@id": "evo:GenerationMeasure",
+      "evo:generationCount": "65"
+    }    
+                     ],
+
+
+  "prov:wasInformedBy": {
+    "@id": "mexcore:Execution",
+    "prov:wasInformedBy": {
+      "@id": "mexcore:ExperimentConfiguration",
+      "prov:used": {
+          "@id": "mexcore:HardwareConfiguration",
+          "mexcore:cpu": "",
+          "mexcore:cpuCache": "",
+          "mexcore:hdType": "",
+          "mexcore:memory": ""
+        },
+      "prov:wasStartedBy": {
+      "@id": "mexcore:Experiment",
+      "prov:wasAttributedTo": {
+      "@id": "mexcore:ApplicationContext"
+      }
+      }
+    },
+    "prov:used": {
+    "@id": "mexalgo:Algorithm",
+      "schema:identifier": "http://github.com...",
+      "schema:name": "Simple Genetic Algorithm",
+      "schema:description": "A python implementation of a simple genetic algorithm to optimize the numerical functions.",
+      "schema:author": [{
+        "@id": "schema:Person",
+        "name": "Saad Razzaq",
+        "email": "saad.razzaq@uos.edu.pk"
+      },
+      {
+        "@id": "schema:Person",
+        "name": "Fahad Maqbool",
+        "email": "fahad.maqbool@uos.edu.pk"
+      },
+      {
+        "@id": "schema:Person",
+        "name": "Hajira Jabeen",
+        "email": "hajira.jabeen@gesis.org"
+      }],
+      "schema:keywords": "Evolutionary Optimization; Mutation; Crossover",
+      "schema:license": "https://www.gnu.org/licenses/gpl-3.0-standalone.html",
+      
+      "mexalgo:hasClass": {
+        "@id": "mexalgo:GeneticAlgorithms"
+      },
+      "mexalgo:hasLearningProblem": {
+        "@id": "mexalgo:MetaHeuristic"
+      },
+      "mexalgo:hasLearningMethod": {
+        "@id": "evo:Evolution"
+      },
+      "mexalgo:hasTool": {
+        "@id": "mexalgo:Python"
+      },
+      "mexalgo:hasHyperParameter": [
+        {
+          "@id": "evo:Initialization",
+          "prov:value": "Random"
+        },
+        {
+          "@id": "evo:Bound",
+          "prov:value": ["-5","+5"]
+        },
+        {
+          "@id": "evo:Encoding",
+          "prov:value": "Bit-String"
+        },
+        {
+          "@id": "evo:PopulationSize",
+          "prov:value": "100"
+        },
+        {
+          "@id": "evo:Dimensions",
+          "prov:value": "20"
+        },
+        {
+          "@id": "evo:Crossover",
+          "prov:value": "One-point Crossover"
+        },
+        {
+          "@id": "evo:CrossoverRate",
+          "prov:value": "0.9"
+        },
+        {
+          "@id": "evo:Mutation",
+          "prov:value": "Bit Flip"
+        },
+        {
+          "@id": "evo:MutationRate",
+          "prov:value": "1.0 / (float(n_bits) * len(bounds))"
+        },
+        {
+          "@id": "evo:Selection",
+          "prov:value": "Tournament"
+        },
+        {
+          "@id": "evo:PopultionUpdate",
+          "prov:value": "Generational"
+        },
+        {
+          "@id": "evo:Replacement",
+          "prov:value": "BothParent"
+        },
+        {
+          "@id": "evo:Termination",
+          "prov:value": "Generations"
+        },
+        {
+          "@id": "evo:MaxGenerations",
+          "prov:value": "100"
+        },
+        {
+          "@id": "evo:FitnessFunc",
+          "prov:value": "One-Max"
+        },
+        {
+          "@id": "evo:FitnessFuncDef",
+          "prov:value": "def onemax(x): return -sum(x)"
+        }
+        
+      ]
+      
+    }
+  }
+    
+}
