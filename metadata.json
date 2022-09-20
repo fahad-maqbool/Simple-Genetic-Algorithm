@@ -30,10 +30,8 @@
       "@id": "mexcore:ExperimentConfiguration",
       "prov:used": {
           "@id": "mexcore:HardwareConfiguration",
-          "mexcore:cpu": "",
-          "mexcore:cpuCache": "",
-          "mexcore:hdType": "",
-          "mexcore:memory": ""
+          "mexcore:hardDisk": "108GB",
+          "mexcore:memory": "36GB"
         },
       "prov:wasStartedBy": {
       "@id": "mexcore:Experiment",
